@@ -27,8 +27,8 @@ class Hostingcheck_Validator_Version extends Hostingcheck_Validator_Compare
      */
     protected $messages = array(
         'equal' => 'Version is not equal to {value}.',
-        'min' => 'Version is to low, should be at least {min}.',
-        'max' => 'Version is to high, should be at most {max}.',
+        'min' => 'Version is too low, should be at least {min}.',
+        'max' => 'Version is too high, should be at most {max}.',
     );
 
 

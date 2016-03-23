@@ -65,7 +65,7 @@ class Hostingcheck_Validator_ByteSize_TestCase extends PHPUnit_Framework_TestCas
                 '6T',
                 array('min' => '6.1T'),
                 'Hostingcheck_Result_Failure',
-                array('Byte size is to low, should be at least 6.1T.'),
+                array('Byte size is too low, should be at least 6.1T.'),
             ),
 
             // Maximum version.
@@ -85,7 +85,7 @@ class Hostingcheck_Validator_ByteSize_TestCase extends PHPUnit_Framework_TestCas
                 1025,
                 array('max' => '1K'),
                 'Hostingcheck_Result_Failure',
-                array('Byte size is to high, should be at most 1K.'),
+                array('Byte size is too high, should be at most 1K.'),
             ),
 
             // Minimum & Maximum combined.
@@ -106,21 +106,21 @@ class Hostingcheck_Validator_ByteSize_TestCase extends PHPUnit_Framework_TestCas
                 array('min' => '6T', 'max' => '4M'),
                 'Hostingcheck_Result_Failure',
                 array(
-                    'Byte size is to low, should be at least 6T.',
-                    'Byte size is to high, should be at most 4M.',
+                    'Byte size is too low, should be at least 6T.',
+                    'Byte size is too high, should be at most 4M.',
                 ),
             ),
             array(
                 '4M',
                 array('min' => '5M', 'max' => '8M'),
                 'Hostingcheck_Result_Failure',
-                array('Byte size is to low, should be at least 5M.'),
+                array('Byte size is too low, should be at least 5M.'),
             ),
             array(
                 '8.1M',
                 array('min' => '4M', 'max' => '8M'),
                 'Hostingcheck_Result_Failure',
-                array('Byte size is to high, should be at most 8M.'),
+                array('Byte size is too high, should be at most 8M.'),
             ),
         );
     }

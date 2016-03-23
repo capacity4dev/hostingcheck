@@ -88,21 +88,21 @@ class Hostingcheck_Validator_Version_TestCase extends PHPUnit_Framework_TestCase
                 array('min' => '6', 'max' => '4'),
                 'Hostingcheck_Result_Failure',
                 array(
-                    'Version is to low, should be at least 6.',
-                    'Version is to high, should be at most 4.',
+                    'Version is too low, should be at least 6.',
+                    'Version is too high, should be at most 4.',
                 ),
             ),
             array(
                 '5.2.3',
                 array('min' => '5.2.4', 'max' => '5.3'),
                 'Hostingcheck_Result_Failure',
-                array('Version is to low, should be at least 5.2.4.'),
+                array('Version is too low, should be at least 5.2.4.'),
             ),
             array(
                 '5.2.3',
                 array('min' => '4', 'max' => '5.2.1'),
                 'Hostingcheck_Result_Failure',
-                array('Version is to high, should be at most 5.2.1.'),
+                array('Version is too high, should be at most 5.2.1.'),
             ),
         );
     }

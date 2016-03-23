@@ -27,8 +27,8 @@ class Hostingcheck_Validator_ByteSize extends Hostingcheck_Validator_Compare
      */
     protected $messages = array(
         'equal' => 'Byte size is not equal to {value}.',
-        'min' => 'Byte size is to low, should be at least {min}.',
-        'max' => 'Byte size is to high, should be at most {max}.',
+        'min' => 'Byte size is too low, should be at least {min}.',
+        'max' => 'Byte size is too high, should be at most {max}.',
     );
 
 
