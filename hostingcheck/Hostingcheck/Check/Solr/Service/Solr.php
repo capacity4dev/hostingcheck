@@ -70,7 +70,7 @@ class Check_Solr_Service_Solr extends Hostingcheck_Service_Abstract {
      *
      * If not connected yet, connect first.
      *
-     * @return PDO|false
+     * @return Apache_Solr_Service|false
      */
     public function connection() {
         return $this->connect();

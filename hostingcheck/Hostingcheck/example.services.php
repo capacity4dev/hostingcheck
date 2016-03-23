@@ -31,3 +31,15 @@ $services['db_mysql'] = array(
         'options'  => array()
     )
 );
+
+/**
+ * Solr service config:
+ */
+$services['solr'] = array(
+  'class' => 'Check_Solr_Service_Solr',
+  'config' => array(
+    'host' => 'localhost',
+    'port' => '8983',
+    'path' => '/solr/capacity4more',
+  )
+);
