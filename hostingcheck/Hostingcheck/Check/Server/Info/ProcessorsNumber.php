@@ -31,7 +31,9 @@ class Check_Server_Info_ProcessorsNumber
             );
         }
         else {
-            $this->value = new Hostingcheck_Value_NotSupported();
+            $this->value = new Hostingcheck_Value_NotSupported(
+              'Please configure the SOLR service first!'
+            );
         }
 
     }
