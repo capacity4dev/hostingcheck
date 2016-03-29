@@ -317,7 +317,7 @@ $php[] = array(
   'required' => TRUE,
 );
 $php[] = array(
-  'title' => 'Extension : memcached',
+  'title' => 'Extension : memcache',
   'info' => 'PHP_Extension',
   'args' => array('name' => 'memcached'),
   'required' => TRUE,
