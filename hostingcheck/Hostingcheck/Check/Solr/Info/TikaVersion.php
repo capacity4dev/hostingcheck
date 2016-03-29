@@ -40,7 +40,7 @@ class Check_Solr_Info_TikaVersion
     /**
      * Get the service from the info object.
      *
-     * @return Hostingcheck_Service_Database
+     * @return Solr_Service_Tika
      */
     public function service() {
         return $this->service;

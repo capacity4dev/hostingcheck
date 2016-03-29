@@ -145,7 +145,7 @@ class Check_Solr_Info_TikaDocument
     /**
      * Get the service from the info object.
      *
-     * @return Hostingcheck_Service_Database
+     * @return Solr_Service_Tika
      */
     public function service() {
         return $this->service;
@@ -172,7 +172,6 @@ class Check_Solr_Info_TikaDocument
         // search keywords
         foreach ($keywords as $keyword) {
             $pos = strpos($document, $keyword);
-            var_dump($keyword, $pos);
             if ($pos === FALSE) {
                 $success = FALSE;
             }

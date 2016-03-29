@@ -39,7 +39,7 @@ class Check_Solr_Info_LuceneVersion
     /**
      * Get the service from the info object.
      *
-     * @return Hostingcheck_Service_Database
+     * @return Check_Solr_Service_Solr
      */
     public function service()
     {
