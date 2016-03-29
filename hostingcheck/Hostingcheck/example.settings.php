@@ -19,7 +19,7 @@ $settings = array();
  *
  * Will be used as the HTML head title and as page title.
  */
-$settings['title'] = 'Hostingcheck';
+$settings['title'] = 'capacity4more hostingcheck';
 
 /**
  * Authentication.

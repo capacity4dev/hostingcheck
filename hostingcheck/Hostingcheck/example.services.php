@@ -15,21 +15,16 @@ $services = array();
 
 
 /**
- * Each service has the array key as its unique name.
- * Each service has 2 params:
- * - class : The service class name to use.
- * - config : An optional array of config parameters that the service needs.
- *
- * This is an example for a MySQL service:
+ * MySQL service config:
  */
 $services['db_mysql'] = array(
-    'class' => 'Hostingcheck_Service_Database',
-    'config' => array(
-        'dsn'      => 'mysql:host=localhost;dbname=db_name',
-        'username' => 'db_username',
-        'password' => 'db_password',
-        'options'  => array()
-    )
+  'class' => 'Hostingcheck_Service_Database',
+  'config' => array(
+    'dsn' => 'mysql:host=[DBHOST];dbname=[DBNAME]',
+    'username' => '[DBUSER]',
+    'password' => '[DBPASS]',
+    'options' => array(),
+  ),
 );
 
 /**
@@ -38,8 +33,30 @@ $services['db_mysql'] = array(
 $services['solr'] = array(
   'class' => 'Check_Solr_Service_Solr',
   'config' => array(
-    'host' => 'localhost',
-    'port' => '8983',
+    'host' => '[SOLRHOST]', // E.g. "localhost".
+    'port' => '[SOLRPORT]', // E.g. "8983",
     'path' => '/solr/capacity4more',
-  )
+  ),
+);
+
+/**
+ * Apache Tika config;
+ */
+$services['tika'] = array(
+  'class' => 'Check_Solr_Service_Tika',
+  'config' => array(
+    'path' => '[TIKAPATH]', // E.g. "/usr/bin/".
+    'jar' => '[TIKAJAR]' // E.g. "tika-app-1.11.jar".
+  ),
+);
+
+/**
+ * Memcache config;
+ */
+$services['memcache'] = array(
+  'class' => 'Check_Memcache_Service_Memcache',
+  'config' => array(
+    'host' => '[MEMCACHEHOST]', // E.g. "localhost".
+    'port' => '[MEMCACHEPORT]' // E.g. "11211".
+  ),
 );
