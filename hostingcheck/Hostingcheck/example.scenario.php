@@ -472,7 +472,7 @@ $solr[] = array(
       'validators' => array(
         array(
           'validator' => 'Version',
-          'args' => array('min' => '5', 'max' => 6),
+          'args' => array('min' => '5.0.0', 'max' => '5.5.0'),
         ),
       ),
     ),
